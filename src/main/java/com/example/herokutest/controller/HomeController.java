@@ -16,7 +16,7 @@ public class HomeController {
 
     @GetMapping("/index")
     public String index(Model model){
-        model.addAttribute(dbm.showOneAuthorFromDB());
+        model.addAttribute("author", dbm.showOneAuthorFromDB());
         return "index";
     }
 
