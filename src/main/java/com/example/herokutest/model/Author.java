@@ -20,8 +20,27 @@ public class Author {
         this.id = id;
     }
 
+    public int getId() {
+        return id;
+    }
 
+    public String getAdded() {
+        return added;
+    }
 
+    public String getBirthdate() {
+        return birthdate;
+    }
 
+    public String getEmail() {
+        return email;
+    }
 
+    public String getFirst() {
+        return first;
+    }
+
+    public String getLast() {
+        return last;
+    }
 }

@@ -1,13 +1,22 @@
 package com.example.herokutest.controller;
 
+import com.example.herokutest.repository.DBManager;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
 
+    DBManager dbm = new DBManager();
+    HomeController(DBManager dbm){
+        this.dbm = dbm;
+    }
+
+
     @GetMapping("/index")
-    public String index(){
+    public String index(Model model){
+        model.addAttribute(dbm.showOneAuthorFromDB());
         return "index";
     }
 
