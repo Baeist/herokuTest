@@ -6,17 +6,18 @@
 </head>
 <body>
 Test
-<div th:each="Author : ${author}">
-    <div th:text="${author.id}"></div>
-    <div th:text="${author.first}"></div>
-    <div th:text="${author.last}"></div>
-    <div th:text="${author.email}"></div>
-    <div th:text="${author.birthdate}"></div>
-    <div th:text="${author.added}"></div>
+<table>
+<tr th:each="Author : ${author}">
+    <td th:text="${author.id}"></td>
+    <td th:text="${author.first}"></td>
+    <td th:text="${author.last}"></td>
+    <td th:text="${author.email}"></td>
+    <td th:text="${author.birthdate}"></td>
+    <td th:text="${author.added}"></td>
 
 
 
 
-</div>
+</tr></table>
 </body>
 </html>
