@@ -42,7 +42,7 @@ public class DBManager {
         String email;
         String birthdate;
         String added;
-        Author author = new Author();
+        Author author = null;
         try {
             Statement statement = connection.createStatement();
             String sql = "SELECT * FROM authors WHERE id = 1";
