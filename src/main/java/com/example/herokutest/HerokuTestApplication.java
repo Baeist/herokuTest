@@ -9,9 +9,10 @@ public class HerokuTestApplication {
 
     public static void main(String[] args) {
 
+        DBManager dbm = new DBManager();
 
         SpringApplication.run(HerokuTestApplication.class, args);
-        DBManager dbm = new DBManager();
+        dbm.makeDBConnection();
     }
 
 }

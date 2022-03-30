@@ -15,9 +15,7 @@ public class DBManager {
     private Connection connection;
 
 
-    public DBManager(){
-        makeDBConnection();
-    }
+    public DBManager(){ }
 
     public void makeDBConnection(){
 
@@ -27,6 +25,7 @@ public class DBManager {
 
         try{
             connection = DriverManager.getConnection(url, user, password);
+            System.out.println("Connection established.");
         }
         catch (Exception e){
             System.out.println("failed to connect to db " + e);
