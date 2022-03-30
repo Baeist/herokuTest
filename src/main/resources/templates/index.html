@@ -7,16 +7,13 @@
 <body>
 Tillykke med fødselsdagen! ;)
 <table>
-<tr th:each="Author : ${author}">
+<tr th:object="${author}">
     <td th:text="${author.id}"></td>
     <td th:text="${author.first}"></td>
     <td th:text="${author.last}"></td>
     <td th:text="${author.email}"></td>
     <td th:text="${author.birthdate}"></td>
     <td th:text="${author.added}"></td>
-
-
-
 
 </tr></table>
 </body>
