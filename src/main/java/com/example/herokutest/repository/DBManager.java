@@ -8,20 +8,15 @@ import java.sql.*;
 @Repository
 public class DBManager {
 
-    private String url;
-    private String password;
-    private String user;
+    private String url = System.getenv("url");
+    private String password = System.getenv("password");
+    private String user = System.getenv("user");
 
     private Connection connection;
-
 
     public DBManager(){ }
 
     public void makeDBConnection(){
-
-        url = System.getenv("url");
-        password = System.getenv("password");
-        user = System.getenv("user");
 
         try{
             connection = DriverManager.getConnection(url, user, password);
@@ -42,6 +37,9 @@ public class DBManager {
         String birthdate;
         String added;
         Author author = null;
+
+        makeDBConnection();
+
         try {
             Statement statement = connection.createStatement();
             String sql = "SELECT * FROM authors WHERE id = 1";
